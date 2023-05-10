@@ -1,0 +1,255 @@
+.inline-block {
+  display: inline-block;
+  vertical-align: top;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+button {
+  border-radius: 150px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3); 
+  padding: 12px 24px; 
+  font-family: 'Montserrat', sans-serif; 
+  color: #ffffff; 
+  background-color: #7c5cfd; 
+  border: none; 
+}
+
+/* Styling for the nav section */
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  font-family: 'montserrat', sans-serif;
+  font-size: 18px;
+  color: #000000;
+}
+
+nav li {
+  position: relative;
+}
+
+nav li a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s;
+}
+
+nav li:hover > a {
+  color: rgb(96, 255, 202);
+}
+
+nav .has-submenu .submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #7c5cfd;
+  min-width: 150px;
+  z-index: 1;
+}
+
+nav .has-submenu .submenu li {
+  display: block;
+}
+
+nav .has-submenu .submenu li a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #fff;
+  transition: background-color 0.3s;
+}
+
+nav .has-submenu .submenu li:hover > a {
+  background-color: #7c5cfd;
+  color: rgb(96, 255, 202);
+}
+
+
+.content {
+  display: flex;
+  justify-content: center;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+.text-container {
+  margin-left: 20px;
+  max-width: 50%;
+}
+
+
+/* Styling for the skills section */
+.mySkills {
+  padding: 4rem;
+  background-color: #f7f7f7;
+}
+
+.mySkills h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.flexContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.mySkills div {
+  flex-basis: calc(33.33% - 2rem);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.mySkills img {
+  max-width: 50%;
+  height: auto;
+}
+
+.mySkills h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.mySkills p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+/* Styling for the work section */
+.myWork {
+  padding: 4rem;
+  padding-top: 50px;
+  background-color: #fff;
+}
+
+.myWork h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.workGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 2rem;
+}
+
+.workGrid div {
+  position: relative;
+}
+
+.workGrid img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.workGrid h4 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.workGrid p {
+  font-size: 1.2rem;
+  line-height: auto
+}
+
+.contact-me {
+  display: none;
+  opacity: 0;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.3);
+  z-index: 999;
+}
+
+/* Styling for the footer section */
+footer {
+  background-color: #73ffd5;
+  padding: 20px;
+}
+
+footer .icon-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  float: right;
+}
+
+footer .icon-list li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+footer .icon-list li a {
+  display: inline-block;
+  width: 50px;
+  height: 50px; 
+  line-height: 50px; 
+  border-radius: 50%; 
+  text-align: center;
+  color: #fff;
+  background-color: #000;
+  font-size: 24px;
+}
+
+footer .icon-list li a:hover {
+  background-color: #4ffcc8;
+}
+
+@media only screen and (max-width: 600px) {
+  /* flex container */
+  .flexcontainer {
+    flex-direction: column;
+  }
+
+  /* flex children */
+  .flex-item {
+    width: 100%;
+  }
+
+  /* grid container */
+  .workGrid {
+    grid-template-areas:
+      "header"
+      "main"
+      "footer";
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 1fr;
+  }
+}
